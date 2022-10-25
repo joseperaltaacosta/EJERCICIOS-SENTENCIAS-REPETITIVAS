@@ -7,9 +7,32 @@ programa termina cuando se acierta el número (además te dice en cuantos
 intentos lo has acertado), si se llega al limite de intentos te muestra el número
 que había generado.'''
 import random
+
+intentos=1
+
 num=random.randint(1,100)
+
 num1=0
 num1=int(input("Dime un numero:"))
-while num1!= num:
-    int(input("Dime otro numero:"))
+
+if num1>num:
+    print("El numero que tienes que adivinar es menor")
+if num1==num:
+    print("")
+if num1<num:
+    print("El numero que tienes que adivinar es mayor")
+
+while num1!= num and intentos!=10:
+    num1=int(input("Dime otro numero:"))
+    if num1>num:
+        print("El numero que tienes que adivinar es menor")
+    if num1==num:
+        print("")
+    if num1<num:
+        print("El numero que tienes que adivinar es mayor")
+    intentos+=1
+if intentos==10:
+    print("El numero secreto era:",num)
+else:
+    print("Has adivinado el numero despues de",intentos,"intentos")
 print("Has adivinado el numero secreto")
