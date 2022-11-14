@@ -4,13 +4,16 @@ segundos.'''
 h=0
 min=0
 seg=0
-decimas=0
-while h!=24:
+for h in range(24):
     h+=1
-    print(h,"horas")
-    while min!=60:
+    print("**********")
+    print(h,"HORAS")
+    print("**********")
+    for min in range(60):
         min+=1
-        print(min,"minutos")
-        while seg!=60:
-            seg+=0.0002
+        print("**********")
+        print(min,"MINUTOS")
+        print("**********")
+        for seg in range(60):
+            seg+=1
             print(seg,"segundos")
